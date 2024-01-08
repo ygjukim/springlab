@@ -1,4 +1,4 @@
-Server
+Server/
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -16,3 +16,6 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+.DS_Store
+.metadata/
