@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+  
+<!--  Annotation-based configuration --> 
+	<context:component-scan base-package="com.springlab.ditest"></context:component-scan>
+	<context:property-placeholder location="tv.properties"/>
+	
+<!-- XML-based configuration -->
+<!--     <bean id="tv" class="com.springlab.ditest.SamsungTV2">
+    	<constructor-arg index="0" ref="boss" />
+		<property name="speaker" ref="boss" />
+		<property name="brand" value="QLED-75" />
+		<property name="price" value="1750000" />
+    </bean>
+ -->
+<!--     <bean id="tv" class="com.springlab.ditest.SamsungTV2"
+    	p:speaker-ref="boss" p:brand="QLED-75" p:price="1750000" />
+ --> 
+ 
+<!--      <bean id="tv" class="com.springlab.ditest.LgTV2">
+     	<constructor-arg name="speaker" ref="sony" />
+     	<constructor-arg name="brand" value="OLED-80" />
+     	<constructor-arg name="price" value="1800000" />
+     </bean>
+ -->
+<!--     <bean id="tv" class="com.sprinlb.ditest.LgTV2"
+    	c:speaker-ref="sony" c:brand="QLED-80" c:price="1800000" />
+ -->
+ 
+<!--     
+	<bean id="sony" class="com.springlab.ditest.SonySpeaker" lazy-init="true" />
+    <bean id="boss" class="com.springlab.ditest.BossSpeaker" lazy-init="true" />
+ -->
+</beans>
